@@ -2,8 +2,8 @@ import mysql.connector
 from mysql.connector import errorcode
 from mysql.connector import Error
 from datetime import datetime,date
-
-cnx = mysql.connector.connect(user='root', password='********',
+import os
+cnx = mysql.connector.connect(user='root', password=f"{os.environ(['SQL_PASSWORD'])}",
                                       host='localhost',
                                       database='hotel_management')
 
